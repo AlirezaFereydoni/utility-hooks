@@ -1,0 +1,23 @@
+{
+  "name": "utility-hooks",
+  "version": "1.0.0",
+  "description": "utility hooks for common usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlirezaFereydoni/utility-hooks.git"
+  },
+  "keywords": [
+    "utility-hooks",
+    "react-hooks"
+  ],
+  "author": "Alireza Fereydoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlirezaFereydoni/utility-hooks/issues"
+  },
+  "homepage": "https://github.com/AlirezaFereydoni/utility-hooks#readme"
+}
