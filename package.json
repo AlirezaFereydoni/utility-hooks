@@ -2,9 +2,17 @@
   "name": "utility-hooks",
   "version": "1.0.0",
   "description": "utility hooks for common usage",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "lib",
+    "esm"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es",
+    "clean": "rimraf lib esm"
   },
   "repository": {
     "type": "git",
@@ -14,10 +22,35 @@
     "utility-hooks",
     "react-hooks"
   ],
-  "author": "Alireza Fereydoni",
+  "author": "@AlirezaFereydoni",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlirezaFereydoni/utility-hooks/issues"
   },
-  "homepage": "https://github.com/AlirezaFereydoni/utility-hooks#readme"
+  "homepage": "https://github.com/AlirezaFereydoni/utility-hooks#readme",
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21",
+    "@typescript-eslint/eslint-plugin": "5.38.0",
+    "@typescript-eslint/parser": "5.38.0",
+    "eslint": "8.23.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "2.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0 || ^18.0.0"
+  }
 }
